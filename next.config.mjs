@@ -7,14 +7,12 @@ const nextConfig = {
     });
   },
 
-  // swcMinify: 코드 최소화 (Minification)
-  swcMinify: true,
-
-
   compiler: {
     // styled-component의 SSR 최적화 & 디스플레이 네임 활성화
+    // babel-plugin-styled-components 대체
     styledComponents: true,
   },
+
   experimental: {
     turbo: {
       rules: {
