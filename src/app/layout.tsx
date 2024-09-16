@@ -1,4 +1,6 @@
 import type { Metadata, Viewport } from 'next';
+import { Providers } from '@app/providers';
+import StyledComponentsRegistry from '@lib/registry';
 
 const APP_NAME = '직주근접';
 const APP_DEFAULT_TITLE = '직주근접';
@@ -56,7 +58,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ko">
       <body suppressHydrationWarning={true}>
         <StyledComponentsRegistry>
           <Providers>{children}</Providers>
