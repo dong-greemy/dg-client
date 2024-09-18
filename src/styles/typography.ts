@@ -1,5 +1,6 @@
+'use client';
+
 import { css } from 'styled-components';
-import media from './media';
 
 const typography = {
   // Display font styles
@@ -7,10 +8,6 @@ const typography = {
     font-size: 50px;
     font-weight: bold;
     line-height: 150%;
-
-    /* desktopp 가이드가 나올시
-    * ${media.desktop` font-size: 0px; `}
-    */
   `,
 
   display2: css`
