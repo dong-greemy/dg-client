@@ -1,3 +1,5 @@
+'use client';
+
 import { CSSObject, Interpolation, css } from 'styled-components';
 
 export type Breakpoints = 'mobile' | 'desktop';
