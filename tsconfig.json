@@ -22,11 +22,12 @@
     "paths": {
       "@/*": ["src"],
       "@app/*": ["src/app/*"],
-      "@api/*": ["src/api/*"],
+      "@services/*": ["src/services/*"],
       "@hooks/*": ["src/hooks/*"],
       "@types/*": ["src/types/*"],
       "@components/*": ["src/components/*"],
-      "@lib/*": ["src/lib/*"],
+      "@containers/*": ["src/containers/*"],
+      "@libs/*": ["src/libs/*"],
       "@styles/*": ["src/styles/*"]
     }
   },

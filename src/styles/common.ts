@@ -12,3 +12,17 @@ export const flex_column = css`
   display: flex;
   flex-direction: column;
 `;
+
+export const header_padding = css`
+  padding-top: 56px;
+`;
+
+export const contents_box = css`
+  background-color: white;
+  border-radius: 6px;
+`;
+
+export const prevent_click_box = css`
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+`;

@@ -3,21 +3,20 @@
 import styled from 'styled-components';
 import Link from 'next/link';
 import typography from '@styles/typography';
-import { flex_center, flex_column } from '@styles/common';
+import { flex_center, flex_column, prevent_click_box } from '@styles/common';
 
 export const HeaderLogo = styled(Link)`
+  ${prevent_click_box};
   position: absolute;
   left: 20px;
   display: flex;
   align-items: center;
   gap: 8px;
-  text-decoration: none;
-  -webkit-user-drag: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-decoration: unset;
 
   span.logoText {
     ${typography.title2}
-    text-decoration: none;
+    text-decoration: unset;
     color: black;
   }
 `;
@@ -29,6 +28,7 @@ export const HeaderClose = styled.button`
   align-items: center;
   outline: none;
   border: none;
+  background-color: white;
 `;
 
 export const HeaderBack = styled.button`
@@ -54,6 +54,6 @@ export const Header = styled.header`
   top: 0;
   width: 100%;
   height: 56px;
-  background-color: #f1f1f1;
+  background-color: white;
   padding: 12px 20px;
 `;
