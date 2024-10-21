@@ -26,3 +26,8 @@ export const prevent_click_box = css`
   -webkit-user-drag: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 `;
+
+export const borderless = css`
+  outline: none;
+  border: none;
+`;
