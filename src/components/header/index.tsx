@@ -1,8 +1,8 @@
 'use client';
 
-import * as S from './styled';
 import { ReactNode } from 'react';
-import Link from 'next/link';
+
+import * as S from './styled';
 
 export const HeaderLogo = ({ children }: { children?: ReactNode }) => {
   return (
@@ -27,7 +27,7 @@ export const HeaderClose = () => {
 
 export const HeaderBack = () => {
   return (
-    <S.HeaderBack onClink={() => history.back()}>
+    <S.HeaderBack onClick={() => history.back()}>
       <img src={'/svg/back-icon.svg'} alt={'back-icon'} />
     </S.HeaderBack>
   );

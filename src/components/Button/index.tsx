@@ -1,10 +1,16 @@
 'use client';
 
-import * as S from './styled';
+import { ReactNode, MouseEventHandler } from 'react';
 
-export const Button = ({ children }) => {
+import * as S from './styled';
+interface ButtonProps {
+  onClick: MouseEventHandler<HTMLButtonElement>;
+  children: ReactNode;
+}
+
+export const Button = ({ onClick, children }: ButtonProps) => {
   return (
-    <S.DefaultButton>
+    <S.DefaultButton onClick={onClick}>
       <div className={'button-title'}>{children}</div>
     </S.DefaultButton>
   );
