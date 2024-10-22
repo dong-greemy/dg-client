@@ -25,8 +25,8 @@ export default function Landing() {
         <S.Main>
           <S.ContentContainer>
             <S.TextContainer>
-              <Text size="t1">집 구하기 좁은 시작</Text>
-              <Text size="h1">
+              <Text size="title1">집 구하기 좁은 시작</Text>
+              <Text size="headline1">
                 동네 탐구 리포트
                 <br />
                 호시탐탐
@@ -36,7 +36,7 @@ export default function Landing() {
           </S.ContentContainer>
           <S.ContentContainer>
             <S.TextContainer>
-              <Text size="h2">
+              <Text size="headline2">
                 직주근접, 하고 싶어도
                 <br />
                 너무 비싸잖아요.
@@ -51,7 +51,7 @@ export default function Landing() {
           </S.ContentContainer>
           <S.ContentContainer>
             <S.TextContainer>
-              <Text size="h2">
+              <Text size="headline1">
                 유니콘을 발견할 수 있는
                 <br />
                 동네를 찾아드릴게요.
@@ -77,7 +77,7 @@ export default function Landing() {
         </S.Main>
         <S.LandingFooter>
           <S.TextContainer>
-            <Text size="t1">Footer 영역</Text>
+            <Text size="title1">Footer 영역</Text>
           </S.TextContainer>
         </S.LandingFooter>
       </S.PageWrapper>

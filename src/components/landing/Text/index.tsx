@@ -1,9 +1,11 @@
 'use client';
 
+import typography from '@styles/typography';
+
 import * as S from './styled';
 
 interface TextProps {
-  size?: 'h1' | 'h2' | 't1';
+  size?: keyof typeof typography;
   children: React.ReactNode;
 }
 

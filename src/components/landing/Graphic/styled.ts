@@ -1,10 +1,11 @@
 'use client';
 
 import styled from 'styled-components';
+
 import { borderless } from '@styles/common';
 
 interface GraphicAreaProps {
-  height?: '270px';
+  height?: string;
 }
 
 export const GraphicArea = styled.div<GraphicAreaProps>`
@@ -12,5 +13,5 @@ export const GraphicArea = styled.div<GraphicAreaProps>`
   padding-top: 32px;
   background: #d9d9d9;
   width: 100%;
-  height: ${props => (props.height ? props.height : '280px')};
+  height: ${props => props.height ?? '280px'};
 `;
