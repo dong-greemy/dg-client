@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { AboutService } from '@components/AboutService';
 import { Button } from '@components/Button';
 import { Header, HeaderLogo } from '@components/Header';
+import SearchIcon from '@svg/search-icon.svg';
 
 import * as S from './styled';
 
@@ -22,7 +23,7 @@ export default function Home() {
             </div>
 
             <Link className={'search-wrapper'} href={'/search'}>
-              <img src={'/svg/search-icon.svg'} alt={'search'} />
+              <SearchIcon />
               <div className={'search-company-text'}>
                 위치를 빠르게 찾아보세요.
               </div>
