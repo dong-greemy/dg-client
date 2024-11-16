@@ -1,9 +1,10 @@
-import { Header, HeaderLogo } from '@components/Header';
+import Link from 'next/link';
+
 import { AboutService } from '@components/AboutService';
 import { Button } from '@components/Button';
+import { Header, HeaderLogo } from '@components/Header';
 
 import * as S from './styled';
-import Link from 'next/link';
 
 export default function Home() {
   return (

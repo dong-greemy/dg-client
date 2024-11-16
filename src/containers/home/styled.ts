@@ -1,13 +1,13 @@
 'use client';
 
 import styled from 'styled-components';
+
 import {
   contents_box,
   flex_column,
   header_padding,
   prevent_click_box,
 } from '@styles/common';
-import Link from 'next/link';
 import typography from '@styles/typography';
 
 export const Main = styled.main`

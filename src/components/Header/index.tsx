@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { ReactNode } from 'react';
 
 import * as S from './styled';
@@ -7,7 +8,7 @@ import * as S from './styled';
 export const HeaderLogo = ({ children }: { children?: ReactNode }) => {
   return (
     <S.HeaderLogo href={'/'}>
-      <img src={'/svg/logo.svg'} alt={'logo'} />
+      <Image src={'/svg/logo.svg'} alt={'logo'} />
       {children && <span className={'logoText'}>{children}</span>}
     </S.HeaderLogo>
   );
@@ -20,7 +21,7 @@ export const HeaderPage = ({ children }: { children: ReactNode }) => {
 export const HeaderClose = () => {
   return (
     <S.HeaderClose>
-      <img src={'/svg/close-icon.svg'} alt={'back-icon'} />
+      <Image src={'/svg/close-icon.svg'} alt={'back-icon'} />
     </S.HeaderClose>
   );
 };
@@ -28,7 +29,7 @@ export const HeaderClose = () => {
 export const HeaderBack = () => {
   return (
     <S.HeaderBack onClick={() => history.back()}>
-      <img src={'/svg/back-icon.svg'} alt={'back-icon'} />
+      <Image src={'/svg/back-icon.svg'} alt={'back-icon'} />
     </S.HeaderBack>
   );
 };

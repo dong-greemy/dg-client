@@ -1,6 +1,6 @@
 'use client';
 
-import { css, styled } from 'styled-components';
+import { css } from 'styled-components';
 
 export const flex_center = css`
   display: flex;

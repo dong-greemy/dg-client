@@ -1,9 +1,11 @@
 'use client';
 
-import styled from 'styled-components';
 import Link from 'next/link';
-import typography from '@styles/typography';
+import styled from 'styled-components';
+
 import { contents_box, prevent_click_box } from '@styles/common';
+import typography from '@styles/typography';
+
 export const AboutService = styled(Link)`
   ${contents_box};
   ${prevent_click_box};

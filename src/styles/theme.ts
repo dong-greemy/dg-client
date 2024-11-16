@@ -1,6 +1,6 @@
-import typography from './typography';
 import colors from './color';
 import media from './media';
+import typography from './typography';
 
 const theme = {
   colors,

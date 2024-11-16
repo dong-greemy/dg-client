@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+
 import { Providers } from '@app/providers';
 import StyledComponentsRegistry from '@libs/registry';
 
