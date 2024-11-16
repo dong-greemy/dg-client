@@ -1,7 +1,8 @@
 'use client';
 
-import Image from 'next/image';
 import { ReactNode, MouseEventHandler } from 'react';
+
+import IOSShareIcon from '@svg/ios-share.svg';
 
 import * as S from './styled';
 
@@ -21,7 +22,7 @@ export const Button = ({ onClick, children }: ButtonProps) => {
 export const ShareButton = ({ onClick, children }: ButtonProps) => {
   return (
     <S.RoundedButton onClick={onClick}>
-      <Image src={'/svg/ios-share.svg'} alt={'ios-share'} />
+      <IOSShareIcon />
       <div className={'button-title'}>{children}</div>
     </S.RoundedButton>
   );
