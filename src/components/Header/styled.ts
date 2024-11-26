@@ -48,7 +48,7 @@ export const HeaderPage = styled.div`
   pointer-events: none;
 `;
 
-export const Header = styled.header`
+export const Header = styled.header<{ underline?: boolean }>`
   display: flex;
   align-items: center;
   position: fixed;
@@ -57,4 +57,6 @@ export const Header = styled.header`
   height: 56px;
   background-color: white;
   padding: 12px 20px;
+  box-shadow: ${({ underline = true }) =>
+    underline ? 'inset 0 -1px 0 #E0E2E4' : 'none'};
 `;
