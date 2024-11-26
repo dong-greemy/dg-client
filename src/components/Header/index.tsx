@@ -1,12 +1,17 @@
 'use client';
 
-import { ReactNode } from 'react';
+import { FC, ReactNode } from 'react';
 
 import BackIcon from '@svg/back-icon.svg';
 import CloseIcon from '@svg/close-icon.svg';
 import Logo from '@svg/logo.svg';
 
 import * as S from './styled';
+
+interface HeaderProps {
+  children: ReactNode;
+  underline?: boolean;
+}
 
 export const HeaderLogo = ({ children }: { children?: ReactNode }) => {
   return (
@@ -37,6 +42,6 @@ export const HeaderBack = () => {
   );
 };
 
-export const Header = ({ children }: { children: ReactNode }) => {
-  return <S.Header>{children}</S.Header>;
+export const Header: FC<HeaderProps> = ({ children, underline }) => {
+  return <S.Header underline={underline}>{children}</S.Header>;
 };

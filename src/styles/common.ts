@@ -18,7 +18,6 @@ export const header_padding = css`
 `;
 
 export const contents_box = css`
-  background-color: white;
   border-radius: 6px;
 `;
 
