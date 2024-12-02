@@ -2,8 +2,8 @@
 
 import styled from 'styled-components';
 
-import { flex_center, borderless } from '@styles/common';
-import typography from '@styles/typography';
+import { flex_center, borderless } from 'styles/common';
+import typography from 'styles/typography';
 
 export const DefaultButton = styled.button`
   ${borderless}

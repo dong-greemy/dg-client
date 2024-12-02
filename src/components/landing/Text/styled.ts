@@ -2,8 +2,8 @@
 
 import styled from 'styled-components';
 
-import { borderless } from '@styles/common';
-import typography from '@styles/typography';
+import { borderless } from 'styles/common';
+import typography from 'styles/typography';
 
 interface LandingTextProps {
   size?: keyof typeof typography;

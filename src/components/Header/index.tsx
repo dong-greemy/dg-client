@@ -2,9 +2,9 @@
 
 import { FC, ReactNode } from 'react';
 
-import BackIcon from '@svg/back-icon.svg';
-import CloseIcon from '@svg/close-icon.svg';
-import Logo from '@svg/logo.svg';
+import BackIcon from 'svg/back-icon.svg';
+import CloseIcon from 'svg/close-icon.svg';
+import Logo from 'svg/logo.svg';
 
 import * as S from './styled';
 

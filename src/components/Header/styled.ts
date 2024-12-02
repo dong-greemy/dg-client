@@ -3,8 +3,8 @@
 import Link from 'next/link';
 import styled from 'styled-components';
 
-import { flex_center, prevent_click_box } from '@styles/common';
-import typography from '@styles/typography';
+import { flex_center, prevent_click_box } from 'styles/common';
+import typography from 'styles/typography';
 
 export const HeaderLogo = styled(Link)`
   ${prevent_click_box};

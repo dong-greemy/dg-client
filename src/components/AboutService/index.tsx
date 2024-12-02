@@ -1,7 +1,7 @@
 'use client';
 
-import SpeakerIcon from '@svg/speaker-icon.svg';
-import RightBackIcon from '@svg/right-back-icon.svg';
+import RightBackIcon from 'svg/right-back-icon.svg';
+import SpeakerIcon from 'svg/speaker-icon.svg';
 
 import * as S from './styled';
 

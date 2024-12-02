@@ -2,10 +2,10 @@
 
 import { useRouter } from 'next/navigation';
 
-import { Button, ShareButton } from '@components/Button';
-import { Header, HeaderBack } from '@components/Header';
-import { Graphic } from '@components/landing/Graphic';
-import { Text } from '@components/landing/Text';
+import { Button, ShareButton } from 'components/Button';
+import { Header, HeaderBack } from 'components/Header';
+import { Graphic } from 'components/landing/Graphic';
+import { Text } from 'components/landing/Text';
 
 import * as S from './styled';
 

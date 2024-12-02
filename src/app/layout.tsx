@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 
-import { Providers } from '@app/providers';
-import StyledComponentsRegistry from '@libs/registry';
+import { Providers } from 'app/providers';
+import StyledComponentsRegistry from 'libs/registry';
 
 const APP_NAME = '동그리미';
 const APP_DEFAULT_TITLE = '동그리미';

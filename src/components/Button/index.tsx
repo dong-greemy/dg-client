@@ -2,7 +2,7 @@
 
 import { ReactNode, MouseEventHandler } from 'react';
 
-import IOSShareIcon from '@svg/ios-share.svg';
+import IOSShareIcon from 'svg/ios-share.svg';
 
 import * as S from './styled';
 

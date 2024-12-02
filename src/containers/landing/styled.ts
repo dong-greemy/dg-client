@@ -2,7 +2,7 @@
 
 import styled from 'styled-components';
 
-import { flex_column, flex_center, header_padding } from '@styles/common';
+import { flex_column, flex_center, header_padding } from 'styles/common';
 
 export const PageWrapper = styled.div`
   ${flex_column};

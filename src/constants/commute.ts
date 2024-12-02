@@ -1,5 +1,3 @@
-import { CommuteTimeType } from '@containers/home';
-
 export interface CommuteTimeType {
   value: number;
   label: string;

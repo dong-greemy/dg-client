@@ -2,7 +2,7 @@
 
 import styled from 'styled-components';
 
-import { borderless } from '@styles/common';
+import { borderless } from 'styles/common';
 
 interface GraphicAreaProps {
   height?: string;
