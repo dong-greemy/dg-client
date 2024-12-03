@@ -13,9 +13,7 @@ export const flex_column = css`
   flex-direction: column;
 `;
 
-export const header_padding = css`
-  padding-top: 56px;
-`;
+export const header_height = '48px';
 
 export const contents_box = css`
   border-radius: 6px;

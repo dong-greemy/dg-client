@@ -2,11 +2,11 @@
 
 import styled from 'styled-components';
 
-import { flex_column, flex_center, header_padding } from 'styles/common';
+import { flex_column, flex_center, header_height } from 'styles/common';
 
 export const PageWrapper = styled.div`
   ${flex_column};
-  ${header_padding};
+  padding: ${header_height};
   height: 100vh;
   overflow-y: auto;
 `;
