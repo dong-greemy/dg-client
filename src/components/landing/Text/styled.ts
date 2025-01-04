@@ -10,7 +10,7 @@ interface LandingTextProps {
 }
 
 export const LandingText = styled.div<LandingTextProps>`
-  ${borderless}
+  ${borderless};
   width: 100%;
   height: fit-content;
   text-align: center;

@@ -9,7 +9,7 @@ interface GraphicAreaProps {
 }
 
 export const GraphicArea = styled.div<GraphicAreaProps>`
-  ${borderless}
+  ${borderless};
   padding-top: 32px;
   background: #d9d9d9;
   width: 100%;

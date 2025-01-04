@@ -37,7 +37,7 @@ export const HeaderBack = styled.button`
 
 export const HeaderPage = styled.div`
   ${typography.title1}
-  ${flex_center}
+  ${flex_center};
   position: absolute;
   left: 0px;
   width: 100%;
