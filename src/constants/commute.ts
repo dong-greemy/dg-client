@@ -1,3 +1,8 @@
+import { SegmentItem } from 'components/SegmentedControl';
+import BusIcon from 'svg/bus-icon.svg';
+import CarIcon from 'svg/car-icon.svg';
+import WalkIcon from 'svg/walk-icon.svg';
+
 /** 통근 시간 */
 export interface CommuteTimeType {
   value: number;
@@ -15,4 +20,8 @@ export const COMMUTE_TIME: CommuteTimeType[] = [
 export const COMMUTE_TIME_LABELS = COMMUTE_TIME.map(item => item.label);
 
 /** 통근 방법 */
-export const COMMUTE_METHOD = [{ value: '대중교통' }, { value: '자동차' }, { value: '도보' }];
+export const COMMUTE_METHOD: SegmentItem[] = [
+  { icon: BusIcon, label: '대중교통' },
+  { icon: CarIcon, label: '자동차' },
+  { icon: WalkIcon, label: '도보' },
+];
