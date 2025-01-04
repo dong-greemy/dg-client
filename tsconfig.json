@@ -23,6 +23,8 @@
       "images/*": ["public/images/*"],
       "svg/*": ["public/svg/*"],
       "app/*": ["src/app/*"],
+      "apis/*": ["src/apis/*"],
+      "hooks/*": ["src/hooks/*"],
       "components/*": ["src/components/*"],
       "constants/*": ["src/constants/*"],
       "containers/*": ["src/containers/*"],
