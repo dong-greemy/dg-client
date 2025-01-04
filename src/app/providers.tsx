@@ -2,11 +2,9 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { PropsWithChildren } from 'react';
 // import { scan } from 'react-scan';
-import { ThemeProvider } from 'styled-components';
 
 import { GlobalPortal } from 'components/GlobalPortal';
 import GlobalStyles from 'styles/global';
-import theme from 'styles/theme';
 
 // /** 개발용 react-scan 세팅 */
 // if (typeof window !== 'undefined') {
@@ -28,12 +26,10 @@ export function Providers({ children }: PropsWithChildren) {
   return (
     <>
       <QueryClientProvider client={queryClient}>
-        <ThemeProvider theme={theme}>
-          <GlobalPortal.Provider>
-            <GlobalStyles />
-            {children}
-          </GlobalPortal.Provider>
-        </ThemeProvider>
+        <GlobalPortal.Provider>
+          <GlobalStyles />
+          {children}
+        </GlobalPortal.Provider>
       </QueryClientProvider>
     </>
   );
