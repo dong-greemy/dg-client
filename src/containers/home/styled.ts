@@ -1,16 +1,32 @@
-'use client';
-
 import styled from 'styled-components';
 
-import { contents_box, flex_column, header_height, borderless } from 'styles/common';
+import {
+  contents_box,
+  flex_column,
+  header_height,
+  borderless,
+  prevent_click_box,
+} from 'styles/common';
 import typography from 'styles/typography';
 
 export const Main = styled.main`
   ${flex_column};
   padding-top: ${header_height};
   height: 100vh;
-  padding-bottom: 70px;
   background-color: white;
+`;
+
+export const CommuteTimeSelect = styled.button`
+  ${borderless};
+  ${prevent_click_box};
+  ${typography.headline3};
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  background-color: unset;
+  border-bottom: 1.5px solid #25282b;
+  padding-left: 6px;
+  cursor: pointer;
 `;
 
 export const HomeContainer = styled.div`
@@ -38,24 +54,44 @@ export const CommuteTime = styled.div`
   }
 `;
 
-export const CommuteTimeSelect = styled.button`
-  ${borderless}
-  ${typography.headline3}
-  display: flex;
-  align-items: center;
-  font-family: inherit;
-  background-color: unset;
-  border-bottom: 1.5px solid #25282b;
-  padding-left: 6px;
-  cursor: pointer;
+export const CommuteMethod = styled.div`
+  margin-top: 16px;
 `;
 
-export const HomeFooter = styled.footer`
-  position: fixed;
-  background-color: white;
+export const SearchCompany = styled.button<{ $isSearched: string | null }>`
+  ${borderless};
+  ${prevent_click_box};
+  ${typography.body1};
+  display: flex;
+  gap: 8px;
   width: 100%;
-  bottom: 0;
-  padding: 8px 20px 12px 20px;
+  margin-top: 24px;
+  background-color: unset;
+  padding: 8px;
+  border-bottom: 1px solid #e0e2e4;
+  cursor: pointer;
+  color: ${({ $isSearched }) => ($isSearched ? '#12161a' : '#868c94')};
+
+  > .myCompanyLocation {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: start;
+  }
+`;
+
+export const SearchCompanyModal = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+`;
+
+export const SearchButton = styled.div`
+  margin-top: 24px;
 `;
 
 export const BottomSheet = styled.div`
