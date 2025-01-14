@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 
+import colors from 'styles/color';
 import { borderless, prevent_click_box } from 'styles/common';
-import theme from 'styles/theme';
+import typography from 'styles/typography';
 
 export const SegmentedControl = styled.div`
   display: flex;
 `;
 export const SegmentOption = styled.button<{ $isSelected?: boolean }>`
-  ${({ $isSelected }) => ($isSelected ? theme.typography.title3 : theme.typography.body2)}
+  ${({ $isSelected }) => ($isSelected ? typography.title3 : typography.body2)}
   ${borderless};
   ${prevent_click_box};
   display: flex;
@@ -17,7 +18,7 @@ export const SegmentOption = styled.button<{ $isSelected?: boolean }>`
   padding: 6px 12px;
   border-radius: 100px;
   cursor: pointer;
-  color: ${({ $isSelected }) => ($isSelected ? theme.colors.primary : 'inherit')};
+  color: ${({ $isSelected }) => ($isSelected ? colors.primary : 'inherit')};
 
   > span {
     text-wrap: nowrap;
@@ -29,6 +30,6 @@ export const SegmentOptionIcon = styled.span<{ $isSelected?: boolean }>`
   align-items: center;
 
   > svg {
-    fill: ${({ $isSelected }) => ($isSelected ? theme.colors.primary : '#25282B')};
+    fill: ${({ $isSelected }) => ($isSelected ? colors.primary : '#25282B')};
   }
 `;
