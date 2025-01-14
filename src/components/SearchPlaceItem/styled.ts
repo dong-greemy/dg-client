@@ -29,6 +29,21 @@ export const SearchItemContent = styled.div<{ $isClose?: boolean }>`
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+
+    > .icon {
+      margin-right: 6px;
+
+      > svg {
+        padding-top: 2px;
+      }
+    }
+
+    > .placeName {
+      b {
+        ${typography.title3};
+        color: #308dff;
+      }
+    }
   }
 
   > .address {
