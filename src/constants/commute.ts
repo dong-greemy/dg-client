@@ -3,7 +3,6 @@ import BusIcon from 'svg/bus-icon.svg';
 import CarIcon from 'svg/car-icon.svg';
 import WalkIcon from 'svg/walk-icon.svg';
 
-/** 통근 시간 */
 export interface CommuteTimeType {
   value: number;
   label: string;
@@ -19,7 +18,6 @@ export const COMMUTE_TIME: CommuteTimeType[] = [
 
 export const COMMUTE_TIME_LABELS = COMMUTE_TIME.map(item => item.label);
 
-/** 통근 방법 */
 export const COMMUTE_METHOD: SegmentItem[] = [
   { icon: BusIcon, label: '대중교통' },
   { icon: CarIcon, label: '자동차' },
