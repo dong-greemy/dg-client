@@ -6,6 +6,6 @@ interface ChipProps {
   children: React.ReactNode;
 }
 
-export default function Chip({ children }: ChipProps) {
+export function Chip({ children }: ChipProps) {
   return <S.Chip>{children}</S.Chip>;
 }

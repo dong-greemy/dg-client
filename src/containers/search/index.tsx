@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { useEffect, useState } from 'react';
 
-import Chip from 'components/Chip';
+import { Chip } from 'components/Chip';
 import { SearchBar } from 'components/SearchBar';
 import { SearchPlaceItem } from 'components/SearchPlaceItem';
 import { MOST_SEARCHED_PLACE, RECENTLY_SEARCH } from 'constants/search';
