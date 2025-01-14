@@ -20,6 +20,14 @@ const nextConfig = {
 
     return config;
   },
+  async rewrites() {
+    return [
+      {
+        source: '/naver/:path*',
+        destination: 'https://openapi.naver.com/:path*',
+      },
+    ];
+  },
 };
 
 export default withPWA(nextConfig);
