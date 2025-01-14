@@ -27,9 +27,9 @@ export default function Home() {
     return !state;
   }, false);
 
-  /** DEFAULT VALUE = COMMUTE_TIME[2] */
+  // DEFAULT VALUE = COMMUTE_TIME[2]
   const [commuteTime, setCommuteTime] = useState<string>(COMMUTE_TIME[2].label);
-  /** DEFAULT VALUE = COMMUTE_METHOD[0] */
+  // DEFAULT VALUE = COMMUTE_METHOD[0]
   const [commuteMethod, setCommuteMethod] = useState<SegmentItem>(COMMUTE_METHOD[0]);
 
   const params = useSearchParams();
@@ -66,7 +66,10 @@ export default function Home() {
             />
           </S.CommuteMethod>
 
-          <S.SearchCompany $isSearched={myCompanyLocation} onClick={() => router.push('/search')}>
+          <S.SearchCompany
+            $isSearched={myCompanyLocation}
+            onClick={() => router.push('/search', { scroll: false })}
+          >
             <SearchIcon />
             <div className="myCompanyLocation">
               {myCompanyLocation ? myCompanyLocation : '내 직장 위치'}
@@ -74,7 +77,7 @@ export default function Home() {
           </S.SearchCompany>
 
           <S.SearchButton>
-            <Button>동네 검색</Button>
+            <Button disabled={!myCompanyLocation}>동네 검색</Button>
           </S.SearchButton>
         </S.HomeContainer>
       </S.Main>

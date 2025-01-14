@@ -6,7 +6,7 @@ import { PropsWithChildren } from 'react';
 import { GlobalPortal } from 'components/GlobalPortal';
 import GlobalStyles from 'styles/global';
 
-// /** 개발용 react-scan 세팅 */
+// 개발용 react-scan 세팅
 // if (typeof window !== 'undefined') {
 //   scan({
 //     enabled: true,
