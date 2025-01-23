@@ -1,15 +1,21 @@
 import axios from 'axios';
 
 interface Props {
-  stSrch: string;
+  startX: string;
+  startY: string;
+  endX: string;
+  endY: string;
 }
 
-const getLocationInfoList = async ({ stSrch }: Props) => {
+const getLocationInfoList = async ({ startX, startY, endX, endY }: Props) => {
   try {
     const response = await axios.get('/pathinfo/getLocationInfo', {
       params: {
         serviceKey: process.env.NEXT_PUBLIC_TRANSIT_DECODE_KEY,
-        stSrch,
+        startX,
+        startY,
+        endX,
+        endY,
         resultType: 'json',
       },
     });
