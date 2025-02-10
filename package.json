@@ -23,7 +23,6 @@
     "react-select": "5.7.7",
     "styled-components": "^6.1.13"
   },
-  "proxy": "https://openapi.naver.com",
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
     "@types/node": "^20",

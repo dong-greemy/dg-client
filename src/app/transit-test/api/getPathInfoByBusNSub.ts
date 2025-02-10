@@ -1,15 +1,15 @@
 import axios from 'axios';
 
 interface Props {
-  startX: string;
-  startY: string;
-  endX: string;
-  endY: string;
+  startX: string | undefined;
+  startY: string | undefined;
+  endX: string | undefined;
+  endY: string | undefined;
 }
 
-const getLocationInfoList = async ({ startX, startY, endX, endY }: Props) => {
+const getPathInfoByBusNSub = async ({ startX, startY, endX, endY }: Props) => {
   try {
-    const response = await axios.get('/pathinfo/getLocationInfo', {
+    const response = await axios.get('/pathinfo/getPathInfoByBusNSub', {
       params: {
         serviceKey: process.env.NEXT_PUBLIC_TRANSIT_DECODE_KEY,
         startX,
@@ -26,4 +26,4 @@ const getLocationInfoList = async ({ startX, startY, endX, endY }: Props) => {
   }
 };
 
-export default getLocationInfoList;
+export default getPathInfoByBusNSub;
