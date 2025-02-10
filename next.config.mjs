@@ -26,6 +26,10 @@ const nextConfig = {
         source: '/naver/:path*',
         destination: 'https://openapi.naver.com/:path*',
       },
+      {
+        source: '/pathinfo/:path*',
+        destination: `http://ws.bus.go.kr/api/rest/pathinfo/:path*`,
+      },
     ];
   },
 };
