@@ -44,8 +44,20 @@ export const CommuteTime = styled.div`
     ${typography.headline3}
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
     color: #25282b;
+
+    > .vehicle-title {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      > span:first-child {
+        padding: 4px 8px;
+        background-color: #eef6ff;
+        border-radius: 6px;
+      }
+    }
 
     > .select-time-title {
       display: flex;

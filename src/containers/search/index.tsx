@@ -1,5 +1,6 @@
 'use client';
 
+import { useSearchParams } from 'next/navigation';
 import * as React from 'react';
 import { useEffect, useState } from 'react';
 
@@ -13,6 +14,9 @@ import { Place, PlaceResType } from 'types/place';
 import * as S from './styled';
 
 export default function Search() {
+  const params = useSearchParams();
+  const destination = params.get('destination');
+
   const mutation = UseSearchPlace();
   // 검색 결과
   const [searchResult, setSearchResult] = useState<PlaceResType | null>(null);
@@ -66,6 +70,7 @@ export default function Search() {
                     placeName={place.title}
                     address={place.address}
                     category={place.category}
+                    destination={destination}
                     isClose={true}
                   />
                 ))
@@ -89,6 +94,7 @@ export default function Search() {
             placeName={place.title}
             address={place.address}
             category={place.category}
+            destination={destination}
           />
         ))}
       </S.SearchList>

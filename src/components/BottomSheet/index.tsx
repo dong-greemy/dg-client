@@ -1,7 +1,6 @@
 import { AnimatePresence } from 'framer-motion';
 import React from 'react';
 
-import CheckIcon from 'svg/check-icon.svg';
 import CloseIcon from 'svg/close-icon-bottom-sheet.svg';
 
 import * as S from './styled';
@@ -12,6 +11,7 @@ interface BottomSheetProps<T> {
   selectedItem: T;
   setItem: (value: T) => void;
   onClose: () => void;
+  gridCol?: number;
 }
 
 export default function BottomSheet<T>({
@@ -20,6 +20,7 @@ export default function BottomSheet<T>({
   selectedItem,
   setItem,
   onClose,
+  gridCol,
 }: BottomSheetProps<T>) {
   const ItemClickHandler = (item: T) => {
     setItem(item);
@@ -44,11 +45,8 @@ export default function BottomSheet<T>({
       >
         <S.Header>
           <S.Title>{title}</S.Title>
-          <S.CloseButton onClick={onClose} aria-label="Close">
-            <CloseIcon />
-          </S.CloseButton>
         </S.Header>
-        <S.Content>
+        <S.Content $col={gridCol}>
           {items.map((item, index) => (
             <S.Item
               key={index}
@@ -56,13 +54,14 @@ export default function BottomSheet<T>({
               $isSelected={selectedItem === item}
             >
               <span>{String(item)}</span>
-              <S.CheckIcon $isSelected={selectedItem === item}>
-                <CheckIcon />
-              </S.CheckIcon>
             </S.Item>
           ))}
         </S.Content>
-        <S.ExtraSpace />
+        <S.Tools>
+          <S.CloseButton onClick={onClose} aria-label="Close">
+            <CloseIcon />
+          </S.CloseButton>
+        </S.Tools>
       </S.Sheet>
     </AnimatePresence>
   );
