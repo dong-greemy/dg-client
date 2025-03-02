@@ -8,11 +8,12 @@ import * as S from './styled';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
+  handler?: () => void;
 }
 
-export const Button = ({ children, disabled = false }: ButtonProps) => {
+export const Button = ({ children, handler, disabled = false }: ButtonProps) => {
   return (
-    <S.DefaultButton disabled={disabled}>
+    <S.DefaultButton disabled={disabled} onClick={handler}>
       <div>{children}</div>
     </S.DefaultButton>
   );
