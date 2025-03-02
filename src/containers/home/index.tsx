@@ -8,8 +8,7 @@ import BottomSheet from 'components/BottomSheet';
 import { Button } from 'components/Button';
 import { GlobalPortal } from 'components/GlobalPortal';
 import { Header, HeaderLogo } from 'components/Header';
-import SegmentedControl, { SegmentItem } from 'components/SegmentedControl';
-import { COMMUTE_METHOD, COMMUTE_TIME, COMMUTE_TIME_LABELS } from 'constants/commute';
+import { COMMUTE_TIME, COMMUTE_TIME_HOME_LABELS } from 'constants/commute';
 import SearchIcon from 'svg/search-icon.svg';
 import SelectArrow from 'svg/select-arrow-icon.svg';
 
@@ -28,9 +27,9 @@ export default function Home() {
   }, false);
 
   // DEFAULT VALUE = COMMUTE_TIME[2]
-  const [commuteTime, setCommuteTime] = useState<string>(COMMUTE_TIME[2].label);
+  const [commuteTime, setCommuteTime] = useState<string>(COMMUTE_TIME[2].home_label);
   // DEFAULT VALUE = COMMUTE_METHOD[0]
-  const [commuteMethod, setCommuteMethod] = useState<SegmentItem>(COMMUTE_METHOD[0]);
+  // const [commuteMethod, setCommuteMethod] = useState<SegmentItem>(COMMUTE_METHOD[0]);
 
   const params = useSearchParams();
   const myCompanyLocation = params.get('place');
@@ -46,6 +45,10 @@ export default function Home() {
 
           <S.CommuteTime>
             <div className={'commute-time-wrapper'}>
+              <div className={'vehicle-title'}>
+                <span>🚌 대중교통</span>
+                <span>으로</span>
+              </div>
               <div className={'select-time-title'}>
                 <span>통근 시간</span>
                 <S.CommuteTimeSelect value={commuteTime} onClick={ModalOpen}>
@@ -54,18 +57,9 @@ export default function Home() {
                 </S.CommuteTimeSelect>
                 <span>이내</span>
               </div>
-              <div>살기 좋은 동네 찾기</div>
+              <div>합리적인 동네 찾기</div>
             </div>
           </S.CommuteTime>
-
-          <S.CommuteMethod>
-            <SegmentedControl
-              items={COMMUTE_METHOD}
-              selectedItem={commuteMethod}
-              setItem={setCommuteMethod}
-            />
-          </S.CommuteMethod>
-
           <S.SearchCompany
             $isSearched={myCompanyLocation}
             onClick={() => router.push('/search', { scroll: false })}
@@ -77,7 +71,18 @@ export default function Home() {
           </S.SearchCompany>
 
           <S.SearchButton>
-            <Button disabled={!myCompanyLocation}>동네 검색</Button>
+            <Button
+              disabled={!myCompanyLocation}
+              handler={() => {
+                if (myCompanyLocation) {
+                  router.push(`/result/?place=${encodeURIComponent(myCompanyLocation)}`, {
+                    scroll: false,
+                  });
+                }
+              }}
+            >
+              동네 검색
+            </Button>
           </S.SearchButton>
         </S.HomeContainer>
       </S.Main>
@@ -85,7 +90,7 @@ export default function Home() {
         <GlobalPortal.Consumer>
           <BottomSheet
             title="통근 시간"
-            items={COMMUTE_TIME_LABELS}
+            items={COMMUTE_TIME_HOME_LABELS}
             selectedItem={commuteTime}
             setItem={setCommuteTime}
             onClose={ModalOpen}
