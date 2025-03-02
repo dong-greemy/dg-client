@@ -12,6 +12,7 @@ interface SearchPlaceItemProps {
   placeName: string;
   address: string;
   category: string;
+  destination?: string | null;
   isClose?: boolean;
 }
 
@@ -19,6 +20,7 @@ export const SearchPlaceItem = ({
   placeName,
   address,
   category,
+  destination,
   isClose = false,
 }: SearchPlaceItemProps) => {
   const router = useRouter();
@@ -48,7 +50,14 @@ export const SearchPlaceItem = ({
   return (
     <S.SearchItem
       onClick={() => {
-        router.push(`/?place=${encodeURIComponent(parsedPlaceName)}`, { scroll: false });
+        console.log('destination', destination);
+        if (destination) {
+          return router.push(`/${destination}/?place=${encodeURIComponent(parsedPlaceName)}`, {
+            scroll: false,
+          });
+        }
+
+        return router.push(`/?place=${encodeURIComponent(parsedPlaceName)}`, { scroll: false });
       }}
     >
       <S.SearchItemContent $isClose={isClose}>
