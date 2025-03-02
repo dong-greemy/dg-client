@@ -33,7 +33,7 @@ export const Header = styled.header`
 export const Title = styled.h3`
   ${typography.title1};
   width: 100%;
-  text-align: center;
+  text-align: start;
 `;
 
 export const CloseButton = styled.button`
@@ -50,24 +50,28 @@ export const CloseButton = styled.button`
   }
 `;
 
-export const Content = styled.ul`
-  padding: 10px;
+export const Content = styled.ul<{ $col?: number }>`
+  display: grid;
+  grid-template-columns: repeat(${props => props.$col || 3}, 1fr);
+  gap: 6px 8px;
+  padding: 20px;
   overflow-y: auto;
   flex: 1;
+  flex-wrap: wrap;
 `;
 
 export const Item = styled.button<{ $isSelected?: boolean }>`
-  ${({ $isSelected }) => ($isSelected ? typography.title2 : typography.body1)}
+  ${typography.body1};
   ${borderless};
-  background-color: unset;
+  flex: 1;
+  background-color: ${({ $isSelected }) => ($isSelected ? '#EEF6FF' : 'unset')};
+  border: ${({ $isSelected }) =>
+    $isSelected ? `1px solid ${colors.primary}` : '1px solid #e7e7e7'};
   font-family: inherit;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   cursor: pointer;
-  padding: 10px;
+  padding: 0.625rem 1.25rem;
   border-radius: 10px;
+  text-wrap: nowrap;
   color: ${({ $isSelected }) => ($isSelected ? colors.primary : 'inherit')};
 
   &:hover {
@@ -79,6 +83,6 @@ export const CheckIcon = styled.div<{ $isSelected?: boolean }>`
   color: ${({ $isSelected }) => ($isSelected ? colors.primary : 'rgba(0, 0, 0, 0)')};
 `;
 
-export const ExtraSpace = styled.div`
+export const Tools = styled.div`
   background-color: white;
 `;

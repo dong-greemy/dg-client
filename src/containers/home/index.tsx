@@ -89,6 +89,7 @@ export default function Home() {
             selectedItem={commuteTime}
             setItem={setCommuteTime}
             onClose={ModalOpen}
+            gridCol={3}
           />
         </GlobalPortal.Consumer>
       )}

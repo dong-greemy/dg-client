@@ -5,18 +5,20 @@ import WalkIcon from 'svg/walk-icon.svg';
 
 export interface CommuteTimeType {
   value: number;
-  label: string;
+  home_label: string;
+  result_label: string;
 }
 
 export const COMMUTE_TIME: CommuteTimeType[] = [
-  { value: 10, label: '10분' },
-  { value: 20, label: '20분' },
-  { value: 30, label: '30분' },
-  { value: 40, label: '40분' },
-  { value: 50, label: '50분' },
+  { value: 10, home_label: '10분', result_label: '10분 이내' },
+  { value: 20, home_label: '20분', result_label: '20분 이내' },
+  { value: 30, home_label: '30분', result_label: '30분 이내' },
+  { value: 40, home_label: '40분', result_label: '40분 이내' },
+  { value: 50, home_label: '50분', result_label: '50분 이내' },
 ];
 
-export const COMMUTE_TIME_LABELS = COMMUTE_TIME.map(item => item.label);
+export const COMMUTE_TIME_HOME_LABELS = COMMUTE_TIME.map(item => item.home_label);
+export const COMMUTE_TIME_RESULT_LABELS = COMMUTE_TIME.map(item => item.result_label);
 
 export const COMMUTE_METHOD: SegmentItem[] = [
   { icon: BusIcon, label: '대중교통' },
