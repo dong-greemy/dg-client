@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import { Suspense } from 'react';
 
 import { Providers } from 'app/providers';
 import StyledComponentsRegistry from 'libs/registry';
@@ -62,7 +63,9 @@ export default function RootLayout({
     <html lang="ko">
       <body suppressHydrationWarning={true}>
         <StyledComponentsRegistry>
-          <Providers>{children}</Providers>
+          <Providers>
+            <Suspense fallback={null}>{children}</Suspense>
+          </Providers>
         </StyledComponentsRegistry>
       </body>
     </html>
