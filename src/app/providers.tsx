@@ -6,14 +6,6 @@ import { PropsWithChildren } from 'react';
 import { GlobalPortal } from 'components/GlobalPortal';
 import GlobalStyles from 'styles/global';
 
-// 개발용 react-scan 세팅
-// if (typeof window !== 'undefined') {
-//   scan({
-//     enabled: true,
-//     log: true, // logs render info to console (default: false)
-//   });
-// }
-
 export function Providers({ children }: PropsWithChildren) {
   const queryClient = new QueryClient({
     defaultOptions: {
